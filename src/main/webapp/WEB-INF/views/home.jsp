@@ -9,7 +9,6 @@
 	안녕
 <<<<<<< HEAD
 	수정
->>>>>>> branch 'master' of https://github.com/sungyeon960/nextudy.git
 	test2
 </h1>
 
