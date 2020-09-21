@@ -6,8 +6,8 @@
 </head>
 <body>
 <h1>
-	안녕2
-	test2
+	안녕
+	test test tsetsetas
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
