@@ -6,8 +6,7 @@
 </head>
 <body>
 <h1>
-	수정
-	test3의 박성연
+	떠또 테스트
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
