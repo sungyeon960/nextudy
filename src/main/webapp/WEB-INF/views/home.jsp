@@ -7,9 +7,7 @@
 <body>
 <h1>
 <<<<<<< HEAD
-	떠또 테스트
-	내가 추가할거야
-
+수정해봄
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
