@@ -13,15 +13,15 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
+			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
 		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
@@ -35,5 +35,19 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/mybatis-3.5.5.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/jackson-databind-2.11.2.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/jackson-core-2.11.2.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/jackson-annotations-2.11.2.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/commons-pool2-2.8.1.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/commons-lang3-3.11.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/commons-dbcp2-2.7.0.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="/home/pc-25/Desktop/commons-beanutils-1.9.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
