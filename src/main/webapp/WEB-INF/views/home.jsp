@@ -196,7 +196,7 @@
 				</div>
 				<div class="col-lg-6 col-sm-6 brand web grid-item">
 					<div class="projects_item">
-						<img class="img-fluid w-100" src="${pageContext.request.contextPath}/resources/img/works/work4.jpg" alt="">
+						<img class="img-fluid   w-100" src="${pageContext.request.contextPath}/resources/img/works/work4.jpg" alt="">
 						<div class="projects_text">
 							<a href="portfolio-details.html">
 								<h4>2D Vinyl Design</h4>
