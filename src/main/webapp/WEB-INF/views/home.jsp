@@ -6,10 +6,7 @@
 </head>
 <body>
 <h1>
-	안녕
-<<<<<<< HEAD
-	수정
-	test2
+	충돌테스트
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
