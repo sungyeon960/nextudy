@@ -1,18 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-<<<<<<< HEAD
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-=======
-<html>
-<head>
-	<title>Home</title>
-</head>
-<body>
-<h1>
-	충돌충돌
-</h1>
->>>>>>> branch 'master' of https://github.com/sungyeon960/nextudy.git
 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 
@@ -51,33 +40,47 @@
 						<span class="icon-bar"></span>
 					</button>
 					<!-- Collect the nav links, forms, and other content for toggling -->
+					<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
-							<li class="nav-item submenu dropdown">
-								<a class="nav-link" href="#">Portfolio</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portrfolio Details</a>
-								</ul>
-							</li>
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
+								 aria-expanded="false">사업소개</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a>
+									<li class="nav-item"><a class="nav-link" href="portfolio.html">브랜드소개</a></li>
+									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">매장찾기</a>
 								</ul>
 							</li>
+							
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
+								 aria-expanded="false">예약하기</a>
 								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="elements.html">예약안내</a></li>
+									<li class="nav-item"><a class="nav-link" href="elements.html">예약현황 및 예약접수</a></li>
+									<li class="nav-item"><a class="nav-link" href="elements.html">예약조회</a></li>
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">공지사항</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">공지사항</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">FAQ</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">문의게시판</a></li>
+								</ul>
+							</li>
+							
+							<li class="nav-item"><a class="nav-link" href="contact.html">커뮤니티</a></li>
+							
 						</ul>
 					</div>
 				</div>
@@ -93,13 +96,12 @@
 				<div class="row fullscreen d-flex align-items-center">
 					<div class="banner-content col-lg-12 justify-content-center">
 						<h1>NEXTUDY 좌석예약시스템</h1>
-						<h3>NEXTUDY 좌석예약시스템</h3>
-						<a href="#" class="primary-btn">눌러봐</a>
+						<a href="#" class="primary-btn">좌석 예약 하기</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="single_slide_banner slide_bg2">
+		<!-- <div class="single_slide_banner slide_bg2">
 			<div class="container">
 				<div class="row fullscreen d-flex align-items-center">
 					<div class="banner-content col-lg-12 justify-content-center">
@@ -120,7 +122,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</section>
 	<!--================End Home Banner Area =================-->
 
