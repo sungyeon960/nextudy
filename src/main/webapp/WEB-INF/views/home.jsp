@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>
-	충돌테스트
+	충돌충돌
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
