@@ -11,26 +11,23 @@ public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-
 		HttpSession session = request.getSession(false);
 		String XRequested = request.getHeader("X-Requested-With");
-
 		if (session == null) {
-			if (XRequested == null) {
+			if(XRequested==null) {
 				response.sendError(HttpServletResponse.SC_FORBIDDEN); // 403, 접근 금지.
 				return false;
-			} else {
-				response.sendError(HttpServletResponse.SC_UNAUTHORIZED); // 401, 인증안됨
+			}else {
+				response.sendError(HttpServletResponse.SC_FORBIDDEN); // 401, 인증오류.
 				return false;
 			}
-			
 		}
 		if (session.getAttribute("USER_INFO") == null) {
-			if (XRequested == null) {
+			if(XRequested==null) {
 				response.sendRedirect(request.getContextPath() + "/login/login.wow");
 				return false;
-			} else {
-				response.sendError(HttpServletResponse.SC_UNAUTHORIZED); // 401, 인증안됨
+			}else {
+				response.sendError(HttpServletResponse.SC_FORBIDDEN); // 401, 인증오류.
 				return false;
 			}
 		}
@@ -38,3 +35,4 @@ public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
 	} // preHandle
 
 }
+// class

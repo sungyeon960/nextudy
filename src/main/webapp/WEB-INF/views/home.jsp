@@ -9,7 +9,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="${pageContext.request.contextPath}/resources/img/favicon.png" type="image/png">
-	<title>호호하하하하</title>
+	<title>NEXTUDY</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendors/linericon/style.css">
@@ -63,7 +63,7 @@
 								 aria-expanded="false">예약하기</a>
 								<ul class="dropdown-menu">
 									<li class="nav-item"><a class="nav-link" href="elements.html">예약안내</a></li>
-									<li class="nav-item"><a class="nav-link" href="elements.html">예약현황 및 예약접수</a></li>
+									<li class="nav-item"><a class="nav-link" href="elements.html">예약현황 & 예약접수</a></li>
 									<li class="nav-item"><a class="nav-link" href="elements.html">예약조회</a></li>
 								</ul>
 							</li>
@@ -78,8 +78,7 @@
 								</ul>
 							</li>
 							
-							<li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/community/communityList.jsp">커뮤니티</a></li>
-							
+							<li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/community/communityList.wow">커뮤니티</a></li>
 						</ul>
 					</div>
 				</div>

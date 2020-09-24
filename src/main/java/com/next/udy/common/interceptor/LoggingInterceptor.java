@@ -10,7 +10,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 public class LoggingInterceptor implements HandlerInterceptor {
-
 	final Logger logger = LoggerFactory.getLogger(getClass());
 
 	@Override
@@ -25,14 +24,13 @@ public class LoggingInterceptor implements HandlerInterceptor {
 		request.setAttribute("interceptor.startTime", System.currentTimeMillis());
 		return true;
 	} // preHandle
-	
 
 	@Override
-	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
-			ModelAndView modelAndView) throws Exception {
-
+	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView mav)
+			throws Exception {
+		
 	}
-	
+
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
@@ -42,6 +40,6 @@ public class LoggingInterceptor implements HandlerInterceptor {
 		if (ex != null) {
 			logger.error("afterCompletion : {}", ex.getMessage(), ex);
 		}
-	}
-
+	} // afterCompletion
 }
+// postHandle

@@ -2,6 +2,10 @@ package com.next.udy.exception;
 
 public class DaoDuplicateKeyException extends DaoException {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String key ;
 	
 	public String getKey() {

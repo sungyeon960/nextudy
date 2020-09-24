@@ -10,9 +10,4 @@
 		<setting name="jdbcTypeForNull" value="NULL" />
 	</settings>
 
-	<mappers>
-		<!-- spring 사용 시 * 사용가능 -->
-		<mapper resource="mybatis/mapper/community.xml" />
-
-	</mappers>
 </configuration>
