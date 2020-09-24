@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- nextudy -->
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
@@ -50,13 +50,9 @@
 		
 		<!-- 매핑별 인터셉터 -->
 		<interceptor>
-			<mapping path="/mypage/**"/>
-			<mapping path="member/**"/>
-			<mapping path="/reply/**"/>
-			<mapping path="/quest/**"/>
+			<mapping path="/community/**"/>
 			<!-- 제외할 별도 매핑 -->
-			<exclude-mapping path="/reply/replyList"/>
-			<exclude-mapping path="/quest/questList"/>
+			<exclude-mapping path="/community/communityList"/>
 			<beans:bean class="com.study.common.interceptor.LoginCheckInterceptor"/>
 		</interceptor>
 	</interceptors>

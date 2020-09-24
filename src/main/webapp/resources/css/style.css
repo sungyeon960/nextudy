@@ -317,6 +317,7 @@ button:focus {
   background-repeat: no-repeat; }
 .banner-area .slide_bg1 {
   background: url(../img/banner/banner-bg1.jpg); 
+  width: 1278px;
   }
 .banner-area .slide_bg2 {
   background: url(../img/banner/banner-bg2.jpg); }

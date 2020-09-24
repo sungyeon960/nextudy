@@ -2,6 +2,11 @@ package com.next.udy.exception;
 
 public class BizNotEffectedException extends BizException {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public BizNotEffectedException() {
 		super();
 

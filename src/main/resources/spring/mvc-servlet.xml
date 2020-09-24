@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- nextudy -->
 <beans:beans xmlns="http://www.springframework.org/schema/mvc"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
@@ -40,33 +40,23 @@
 			빈 : 스프링이 관리하는 객체 -->
 			
 	<!-- false이기에 찾지 않음 따라서 아래 expression에 명시를 해줘야 함 false일때 include!!! exclude가 아니다-->
-	<context:component-scan base-package="com.study" use-default-filters="false">
+	<context:component-scan base-package="com.next.udy" use-default-filters="false">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 	
 	<interceptors>
 		<!-- 모든 요청에 적용되는 인터셉터 -->
-		<beans:bean class="com.study.common.interceptor.LoggingInterceptor"/>
+		<beans:bean class="com.next.udy.common.interceptor.LoggingInterceptor"/>
 		
 		<!-- 매핑별 인터셉터 -->
 		<interceptor>
-			<mapping path="/mypage/**"/>
-			<mapping path="member/**"/>
-			<mapping path="/reply/**"/>
-			<mapping path="/quest/**"/>
+			<mapping path="/community/**"/>
 			<!-- 제외할 별도 매핑 -->
-			<exclude-mapping path="/reply/replyList"/>
-			<exclude-mapping path="/quest/questList"/>
-			<beans:bean class="com.study.common.interceptor.LoginCheckInterceptor"/>
+			<exclude-mapping path="/community/communityList"/>
+			<beans:bean class="com.next.udy.common.interceptor.LoginCheckInterceptor"/>
 		</interceptor>
 	</interceptors>
 	
-	<beans:bean id="multipartResolver"
-					class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<beans:property name="maxUploadSizePerFile" 	value="#{app['file.upload.each.size']}"/>
-		<beans:property name="maxUploadSize" 			value="#{app['file.upload.max.size']}"/>
-		<beans:property name="maxInMemorySize" 			value="#{app['file.upload.memory.size']}"/>
-	</beans:bean>
 	
 	<util:properties id="app" location="classpath:appconfig.properties"/>
 		
@@ -93,7 +83,7 @@
 	</beans:bean>
 	<!-- 자바 파일에 설정된 어노테이션을 검색해서 빈으로 등록 
 		빈 : 스프링이 관리하는 객체  -->
-	<mybatis-spring:scan base-package="com.study"
+	<mybatis-spring:scan base-package="com.next.udy"
 							annotation="org.apache.ibatis.annotations.Mapper"/>
 
 

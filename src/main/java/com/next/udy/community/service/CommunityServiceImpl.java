@@ -2,8 +2,6 @@ package com.next.udy.community.service;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
 import org.springframework.stereotype.Service;
 
 import com.next.udy.community.vo.CommunitySearchVO;
