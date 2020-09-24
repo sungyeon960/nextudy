@@ -16,7 +16,7 @@ public interface ICommunityDao {
 	 * @return int
 	 */
 	
-	public int getBoardCount (CommunitySearchVO searchVO); 
+	public int getCommunityCount (CommunitySearchVO searchVO); 
 	
 	/**
 	 * <b>자유게시판 목록 반환</b> 
