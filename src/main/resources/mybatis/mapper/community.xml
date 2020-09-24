@@ -2,10 +2,10 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- namespace 간단하게 해도 되지만 매퍼 클래스를 사용하려면 완전한 이름의 클래스 이름으로 지정 -->
+    
 <mapper namespace="com.next.udy.community.dao.ICommunityDao">
 
-<sql id="whereClause">
+	<sql id="whereClause" >
 		<if test="@org.apache.commons.lang3.StringUtils@isNotBlank(searchCategory)">
 			AND com_category = #{searchCategory}
 		</if>
@@ -23,7 +23,7 @@
 		parameterType="com.next.udy.community.vo.CommunitySearchVO">
 		SELECT count(*)
 		FROM community
-		<include refid="whereClause"/>
+		<include refid="whereClause"></include>
 	</select>
 
 	<select id="getCommunityList"
@@ -111,5 +111,4 @@
 		FROM community
     	where com_no = #{comNo}
 	</select>
-
 </mapper>
