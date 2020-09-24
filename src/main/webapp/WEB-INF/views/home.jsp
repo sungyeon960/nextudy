@@ -78,7 +78,7 @@
 								</ul>
 							</li>
 							
-							<li class="nav-item"><a class="nav-link" href="contact.html">커뮤니티</a></li>
+							<li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/community/communityList.jsp">커뮤니티</a></li>
 							
 						</ul>
 					</div>

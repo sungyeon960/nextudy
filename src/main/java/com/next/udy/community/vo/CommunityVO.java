@@ -19,6 +19,9 @@ public class CommunityVO implements Serializable {
 	
 	//추가 필드
 	private String comCategoryNm;      /* 카테고리 이름 */
+	private String comRegDate;			/* 등록일 */
+	private String comModDate;			/* 수정일 */
+	private int comHit;						/* 조회수 */
 	
 	
 	@Override
@@ -74,6 +77,36 @@ public class CommunityVO implements Serializable {
 	}
 	public void setComCategoryNm(String comCategoryNm) {
 		this.comCategoryNm = comCategoryNm;
+	}
+
+
+	public String getComRegDate() {
+		return comRegDate;
+	}
+
+
+	public void setComRegDate(String comRegDate) {
+		this.comRegDate = comRegDate;
+	}
+
+
+	public String getComModDate() {
+		return comModDate;
+	}
+
+
+	public void setComModDate(String comModDate) {
+		this.comModDate = comModDate;
+	}
+
+
+	public int getComHit() {
+		return comHit;
+	}
+
+
+	public void setComHit(int comHit) {
+		this.comHit = comHit;
 	}
 	
 	
