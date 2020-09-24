@@ -27,7 +27,7 @@
 	</bean>
 	<!-- 자바 파일에 설정된 어노테이션을 검색해서 빈으로 등록 
 		빈 : 스프링이 관리하는 객체  -->
-	<mybatis-spring:scan base-package="com.study" annotation="org.apache.ibatis.annotations.Mapper"/>
+	<mybatis-spring:scan base-package="com.next.udy" annotation="org.apache.ibatis.annotations.Mapper"/>
 	
 	
 </beans>

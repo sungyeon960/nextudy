@@ -35,28 +35,25 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	
-	<!-- 자바파일에 설정된 어노테이션을 검색해서 빈으로 등록
-			빈 : 스프링이 관리하는 객체 -->
-			
-	<!-- false이기에 찾지 않음 따라서 아래 expression에 명시를 해줘야 함 false일때 include!!! exclude가 아니다-->
-	<context:component-scan base-package="com.next.udy" use-default-filters="false">
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	<!-- 자바파일에 설정된 어노테이션을 검색해서 빈으로 등록 빈 : 스프링이 관리하는 객체 -->
+	<!-- false이기에 찾지 않음 따라서 아래 expression에 명시를 해줘야 함 false일때 include!!! exclude가 
+		아니다 -->
+	<context:component-scan base-package="com.next.udy"
+		use-default-filters="false">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 	
 	<interceptors>
 		<!-- 모든 요청에 적용되는 인터셉터 -->
-		<beans:bean class="com.next.udy.common.interceptor.LoggingInterceptor"/>
-		
+		<beans:bean
+			class="com.next.udy.common.interceptor.LoggingInterceptor" />
 		<!-- 매핑별 인터셉터 -->
 		<interceptor>
 			<mapping path="/community/**"/>
-			<!-- 제외할 별도 매핑 -->
-			<exclude-mapping path="/community/communityList"/>
 			<beans:bean class="com.next.udy.common.interceptor.LoginCheckInterceptor"/>
 		</interceptor>
 	</interceptors>
-	
 	
 	<util:properties id="app" location="classpath:appconfig.properties"/>
 		
@@ -85,6 +82,5 @@
 		빈 : 스프링이 관리하는 객체  -->
 	<mybatis-spring:scan base-package="com.next.udy"
 							annotation="org.apache.ibatis.annotations.Mapper"/>
-
 
 </beans:beans>

@@ -78,8 +78,7 @@
 								</ul>
 							</li>
 							
-							<li class="nav-item"><a class="nav-link" href="community.jsp">커뮤니티</a></li>
-							
+							<li class="nav-item"><a class="nav-link" href="<%=request.getContextPath()%>/community/communityList.wow">커뮤니티</a></li>
 						</ul>
 					</div>
 				</div>
