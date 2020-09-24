@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 간단하게 해도 되지만 매퍼 클래스를 사용하려면 완전한 이름의 클래스 이름으로 지정 -->
+<mapper namespace="com.next.udy.community.dao.ICommunityDao">
+
+<sql id="whereClause">
+		<if test="@org.apache.commons.lang3.StringUtils@isNotBlank(searchCategory)">
+			AND com_category = #{searchCategory}
+		</if>
+		<if test="@org.apache.commons.lang3.StringUtils@isNotBlank(searchWord)">
+			<choose>
+				<when test='searchType == "T"'>AND com_title LIKE '%' || #{searchWord} || '%' </when>
+				<when test='searchType == "I"'>AND com_id LIKE '%' || #{searchWord} || '%'</when>
+				<when test='searchType == "C"'>AND com_content LIKE '%' || #{searchWord} || '%'</when>
+				<otherwise>AND com_title LIKE '%' || #{searchWord} || '%' </otherwise>
+			</choose>
+		</if>
+	</sql>
+
+	<select id="getCommunityCount" resultType="int"
+		parameterType="com.next.udy.community.vo.CommunitySearchVO">
+		SELECT count(*)
+		FROM community
+		<include refid="whereClause"/>
+	</select>
+
+	<select id="getCommunityList"
+		resultType="com.next.udy.community.vo.CommunityVO"
+		parameterType="com.next.udy.community.vo.CommunitySearchVO">
+		<include refid="common.PRE_PAGING_SQL" />
+		SELECT com_no
+		, com_category
+		, b.comm_nm as com_category_nm
+		, com_title
+		, com_id
+		, com_content
+		, com_attach
+		, com_pass
+		, TO_CHAR(com_reg_date,'YYYY.MM.DD') AS com_reg_date
+		, TO_CHAR(com_mod_date,'YYYY.MM.DD') AS com_reg_date
+		FROM
+    	community a, comm_code b
+    	where a.com_category = b.comm_cd
+		<include refid="whereClause" />
+		<include refid="common.SUF_PAGING_SQL" />
+	</select>
+
+	<insert id="insertCommunity"
+		parameterType="com.next.udy.community.vo.CommunityVO">
+		
+	INSERT INTO community (
+    com_no
+    , com_category
+    , com_title
+    , com_id
+    , com_content
+    , com_attach
+    , com_pass
+    , com_reg_date
+    , com_mod_date
+	) VALUES (
+    community_seq.nextval
+    , #{comCatagory}
+    , #{comTitle}
+    , #{comId}
+    , #{comContent}
+    , #{comAttach}
+    , #{comPass}
+    , sysdate
+    , null )
+	</insert>
+
+	<update id="updateCommunity"
+		parameterType="com.next.udy.community.vo.CommunityVO">
+		UPDATE community
+		SET 
+		com_category = #{comCategory}
+		, com_title = #{comTitle}
+		, com_content = #{comContent}
+		, bo_mod_date = sysdate
+		WHERE com_no = #{comNo}
+	</update>
+	
+	<delete id="deleteCommunity"
+		parameterType="com.next.udy.community.vo.CommunityVO">
+		UPDATE community
+		WHERE com_no = #{comNo}
+	</delete>
+
+	<update id="increaseHit" parameterType="int">
+		UPDATE community
+		SET
+		com_hit = com_hit + 1
+		WHERE com_no = #{comNo}
+	</update>
+
+	<select id="getCommunity" resultType="com.next.udy.community.vo.CommunityVO"
+		parameterType="int">
+		SELECT com_no
+		, com_category
+		, (SELECT comm_nm FROM comm_code WHERE comm_cd=com_category) AS com_category_nm
+		, com_title
+		, com_id
+		, com_content
+		, com_attach
+		, com_pass
+		, TO_CHAR(com_reg_date,'YYYY.MM.DD') AS com_reg_date
+		, TO_CHAR(com_mod_date,'YYYY.MM.DD') AS com_reg_date
+		FROM community
+    	where com_no = #{comNo}
+	</select>
+
+</mapper>
