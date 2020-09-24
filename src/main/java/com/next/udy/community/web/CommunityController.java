@@ -6,7 +6,6 @@ import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,7 +19,7 @@ import com.next.udy.community.vo.CommunityVO;
 @Controller
 public class CommunityController {
 	
-	@Autowired
+	@Inject
 	ICommunityService communityService; 
 //	@Inject
 //	ICommonCodeService codeService; // = new CommonCodeServiceImpl();
